@@ -1,0 +1,101 @@
+rec_id,user_id,track_id,rec_reason
+1,44,5jzEwSyyymBlf1fa1o39T2,Similar to favorite artist
+2,49,6wkHR8cU4INbp145hngbQO,Trending in your region
+3,11,5COt7t7dkzHAp55Pxl1cnI,Based on liked genres
+4,16,6gXrEUzibufX9xYPk3HD5p,Highly rated track
+5,17,43GS3mtezoIFiuIZCLLiDY,Highly rated track
+6,45,2ZdhQh3f6vbofunkey8HlA,Highly rated track
+7,29,0dHpOqqAHj1UsMWlIv3Qjk,Trending in your region
+8,3,22x6TxJlGxZfQjJbAN4cQY,Similar to favorite artist
+9,30,25KjMlA0KAwRKS9JuT1NSq,Similar to favorite artist
+10,32,24k6OwxLtnJX0UaC4j5O8W,Based on liked genres
+11,14,2PYmLWYQKcyiDoduL1ewVO,Highly rated track
+12,12,3uZ4KyVZwwnfAt3IGhS3c0,Based on liked genres
+13,4,19RybK6XDbAVpcdxSbZL1o,Similar to favorite artist
+14,48,46vOrwK5aYq71BwwIAv1iO,Similar to favorite artist
+15,49,1wADwLSkYhrSmy4vdy6BRn,Based on liked genres
+16,11,25nJlTvkgFCFIzV3rhumZ9,Similar to favorite artist
+17,44,5Ujp7vES41Sc6YwN3m4GDq,Based on liked genres
+18,4,6agtlDGA0RCIC0yNiPeAxZ,Similar to favorite artist
+19,4,26QApq0cuO9brJigr0C0W4,Trending in your region
+20,17,4SdTyIjA6FuADAN9W8sZjq,Highly rated track
+21,3,3AJwUDP919kvQ9QcozQPxg,Similar to favorite artist
+22,36,3Q30mwHAXv4cYoIQFiIWt8,Highly rated track
+23,37,4WVcTxy8lZqrz3wp0Mp1DF,Based on liked genres
+24,24,43lwHSTEexXRVVeXZtAtfi,Similar to favorite artist
+25,39,2BPXILn0MqOe5WroVXlvN1,Similar to favorite artist
+26,21,6afQ4fJDJ9QqU5BKIH99Ej,Trending in your region
+27,18,4bLKGUkVRxIyrN1770DdDm,Similar to favorite artist
+28,16,5cBArlwbcWbtM1bojUohLx,Highly rated track
+29,49,6vN77lE9LK6HP2DewaN6HZ,Based on liked genres
+30,13,7lQ8MOhq6IN2w8EYcFNSUk,Based on liked genres
+31,37,3MsEJbnW0SYWNzQ6D1j5Xm,Trending in your region
+32,45,7iBDaZg7KBU5Qm0J3qpVe4,Trending in your region
+33,24,2x6WhnhzmKMbG1oO5fIW5G,Highly rated track
+34,46,1m5O3VNj0yGcZdzg5NxMCF,Based on liked genres
+35,38,4arNFfHtD5FPYcpUUiUOM1,Trending in your region
+36,17,1rj0JZBZJhBa0LL2sQ7ro9,Based on liked genres
+37,11,6yyrsrci6u2nreFlhXSy3J,Similar to favorite artist
+38,37,6Uc23VRzRJSgu3eebPvH8I,Trending in your region
+39,25,6naxalmIoLFWR0siv8dnQQ,Similar to favorite artist
+40,17,7cf0gIrGoLBLd5ANzDhWpk,Trending in your region
+41,50,2KFg8kjYy0rYjWsXGhEQHN,Highly rated track
+42,16,5oWkX9tQ0zpkhW77SYRe1T,Highly rated track
+43,37,2a05ZVwyOuihPPQtnX7IQw,Similar to favorite artist
+44,5,42TG6DA1g7djgzBfOH6FqM,Based on liked genres
+45,19,0sgx4UjoIrLB8rFURf3tIr,Highly rated track
+46,27,4ak9GGe6afmi2HbxEjvhIC,Similar to favorite artist
+47,15,3n69hLUdIsSa1WlRmjMZlW,Based on liked genres
+48,23,0OA00aPt3BV10qeMIs3meW,Similar to favorite artist
+49,4,1YHe10629RcHU4qusWR9b1,Trending in your region
+50,50,7GkHIsnziYgk6j1lx2TK6H,Highly rated track
+51,6,4arNFfHtD5FPYcpUUiUOM1,Trending in your region
+52,40,4lu2i1XcWo1zze2vealWlB,Similar to favorite artist
+53,40,0JP9xo3adEtGSdUEISiszL,Highly rated track
+54,2,2bKcKMDU9JHtLJ8xeHR46X,Based on liked genres
+55,33,1sWYVBg7ix2WAq43J9nY7E,Highly rated track
+56,31,2p2IUL7Wn1W4bSCxrYSFEh,Highly rated track
+57,3,4pN4uE4g6srE6376NDwMJP,Similar to favorite artist
+58,10,36vRjLAq0PnT1Pvugs1rQH,Trending in your region
+59,23,3XVozq1aeqsJwpXrEZrDJ9,Based on liked genres
+60,3,0ECkPMDQlTtL373y7BByup,Highly rated track
+61,21,01Lr5YepbgjXAWR9iOEyH1,Trending in your region
+62,19,7vFoFDWqTX0mHzLfrF1Cfy,Based on liked genres
+63,28,5anCkDvJ17aznvK5TED5uo,Based on liked genres
+64,31,4KZMoDuxwSYP63bhbnMqe3,Trending in your region
+65,27,29IrCyfdn18grnSQ3ynguE,Based on liked genres
+66,34,2epHEGzdynPsNt6AXiBnC7,Based on liked genres
+67,43,5Jpz4nv8nA6FIYO5gEyQa2,Similar to favorite artist
+68,12,53rGZ9nMZsUa55XYkdIjGJ,Highly rated track
+69,31,71M1szVbVYZM5M6QlIm6aC,Similar to favorite artist
+70,15,2ftrEmzMbleD2rMmAAI6vh,Highly rated track
+71,1,1oYYd2gnWZYrt89EBXdFiO,Highly rated track
+72,22,0DiWol3AO6WpXZgp0goxAV,Highly rated track
+73,1,2DmYjQ1Z1yjHZCbzNmKE2J,Highly rated track
+74,40,6ursmCnbc9oDRGa2yHKkoZ,Similar to favorite artist
+75,38,442HltvzhREoVIVY9aeGaG,Highly rated track
+76,44,5vdQUAFncALEH9EQvyAqIX,Highly rated track
+77,32,0AluA5RNsa4Cx6XRhf2hWZ,Trending in your region
+78,30,1ga4PztXOIw1yBbdUt2X8v,Similar to favorite artist
+79,24,2fFTn0f94EopgZyfSGQuyK,Highly rated track
+80,35,73v6pnPg3mqHIg3qQtIr7j,Highly rated track
+81,9,4Na2HfNSr58chvfX69fy36,Based on liked genres
+82,41,4eHbdreAnSOrDDsFfc4Fpm,Similar to favorite artist
+83,26,7gzQzrH2ClI6WZaHLD5emF,Trending in your region
+84,37,0yD7X7Tc6erimyCZ02QUrI,Based on liked genres
+85,13,4FPF6KASKzwYP3XRjXm0jF,Highly rated track
+86,41,1xUJ1mdLAysxNBtO9w3J2g,Highly rated track
+87,5,5Zqioa05Noregw4jamykSH,Similar to favorite artist
+88,14,5ZjkNspQw1OWzKo6p4XJz5,Based on liked genres
+89,33,6Wpgf0xNuBIUpJF2uH7swL,Highly rated track
+90,33,4w3tQBXhn5345eUXDGBWZG,Based on liked genres
+91,24,7foqp1x0ieFKdG9CKnYyHu,Trending in your region
+92,40,480j122Gpi252OIfy4SNzm,Highly rated track
+93,33,7jVfySXCpJkZD72K23ywhg,Highly rated track
+94,48,2bHIHO6ynxSMm5ZlQp5CDe,Highly rated track
+95,14,2gMXnyrvIjhVBUZwvLZDMP,Highly rated track
+96,45,28CuT91wRWdQtJU93Hm3ds,Trending in your region
+97,9,5Pl4OxV9RGWNMO8MGmAoDP,Similar to favorite artist
+98,24,2rc7BkzO8qepMFAxHtOrXc,Trending in your region
+99,49,1j8z4TTjJ1YOdoFEDwJTQa,Similar to favorite artist
+100,47,4qfD7xjF4ZhteeAc6B7TjA,Trending in your region

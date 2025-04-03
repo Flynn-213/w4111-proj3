@@ -1,0 +1,51 @@
+preference_id,user_id,liked_genres,liked_artists,liked_tracks
+1,1,gospel,"Treklangen, Bad Marriage, Missed You at the Show",Est-ce que tu m'aimes ? - Pilule bleue
+2,2,korean,"Helias, Energun 22, Jared Celosse","Piano Concerto No. 2 in C Minor, Op. 18: 2. Adagio sostenuto"
+3,3,"j-pop, turkish, mandopop","Brown Jenkins, Swaginas","早班火車, I'm Good (Blue), Aller sans retour"
+4,4,"blues, ambient","Jesse Powell, La Gallera Social Club, John Taverner",Yeux disent
+5,5,indian,"LM Pagano, Gustaf Düben","Fruen fra havet, EL MAKINON, Sammumaton, Rapids, IC3 (feat. Skepta) - Single Version"
+6,6,"indie, world","Ekelhaft, Trent Willmon, Doriot Anthony Dwyer","N95, Decide Tú, Another Stranger"
+7,7,"funk, reggae","Quentin Alexander, Behçet Necatigil","Lättdistraherad, Saturday Morning, Ritmo Desconocido, Sunset Coffee"
+8,8,"rock, jazz","Akira Ono, Disintegrate You Bastard","Big Big Things (feat. Kizz Daniel & Seyi Vibez), Cynnes, Simcha Strong - Camp Simcha 2019 Boys Song - Camp Simcha Remix, Kumama Papa, Por Ti"
+9,9,pop,Krzysztof Jakowicz,"Stuck with U (with Justin Bieber), You Are My Everything, Peg Te Bhangra"
+10,10,"folk, soul",No Name Desire,"Expected Events, i am not who i was, 這麼多年 - 電影《我想和你在一起》插曲, Maria Forrozeira, Agar Tum Saath Ho"
+11,11,"wellness, latin","Haro Slok, Ola Åkerman, Joe Blossom",Gimme! Gimme! Gimme! (A Man After Midnight)
+12,12,"electronic, k-pop","The Walkers, Blood Candy",DÁKITI
+13,13,r&b,"Nils Lindberg, No Somos Marineros","OverSeas, Come Alive, Rave Mozart"
+14,14,k-pop,"Shikao & the Family Sugar, Luiz Otávio Braga, All These Runners","A Batucada Dos Nossos Tantãs, Pot-Pourri: Eu Não Sou o Que Ela Pensou/ Não Fique a Se Torturar/ Vai Pro Lado de Lá, Reflections"
+15,15,wellness,"False Archetypes, Samira Taylor, De Portables","Don't Tell Ma, Baby, Ceres, Kilometer, Praise Combo"
+16,16,"mandopop, j-pop, electronic","Дмитрий Николаевич Курилов, Mr Puaz","SEXO ES LA MODA, Only You Freestyle, Vou Te Namorar"
+17,17,indian,"及川恒平, Mario Ruiz Armengol, 片山義美","Desert Traces, i don’t know what i saw in you, Dame"
+18,18,"k-pop, soul, metal",Raizing Hell,"Isla Privée, Autonomy, Call a Friend, Una Locura, Good & Plenty"
+19,19,"korean, metal",Ghostek,"22, Learn to Fly, OLÙGBÈJÀ, Miss Murder, Verte Ir"
+20,20,"jazz, r&b, indian",Los Chimberos,"everything you say, No Option, Lost Without You, 灰色"
+21,21,"brazilian, funk, jazz","Paulo Rios Filho, Acrylik",Black Friday
+22,22,"punk, hip-hop, arabic","The Del‐Vikings, Hectic, Juanjo Mosalini","Perfect Moment, MTG MALDIÇÃO ETERNA 1.0 (Slowed)"
+23,23,"j-pop, indie","Pasajeros, Druhá Smrt, Cuerdas","This Love, Biri Marung (feat. Sje Konka, Focalistic, DJ Maphorisa, Scotts Maphuma & CowBoii), True To Myself, Immigrant Song - Remaster, Jamboree"
+24,24,latin,Святослав Кнушевицкий,"Cartomante, Sua amiga deu, För mig själv"
+25,25,"folk, rock, j-pop","Abigore, Grupo Lanigi Mua, Aljibe","back n forth, Step, NO SLEEP $$$ (feat. Young Jonn), Teenage Fever"
+26,26,"country, soca, reggae","Soopa Villainz, Sôra, Άβατον","La Playa, Neva Cared, We Still Share the Same Sky, Stereo Hearts (feat. Adam Levine)"
+27,27,mandopop,Rikihatka,9:45
+28,28,"blues, folk, latin",Brika,"BROTHER, Yuna, Faz Striptease (Versão Tik Tok)"
+29,29,"k-pop, classical","Remberto Bequer, Jingga","When I Was Your Man, One Summer's Day (Spirited Away), Violin Sonata in A major, FWV 8: IV. Allegretto poco mosso, Toxic"
+30,30,"gaming, ambient, blues","ForeignBlade, Ela Stiles, Spring Fever","When I'm in Your Arms, First Date"
+31,31,"hip-hop, k-pop","Helia, Passive","What’s This About (La La La La), Autonomy, FUTURE//PAST, Espresso"
+32,32,pop,"J.R Alexander, Project Blubook","Vizardit, Cennet, SEXO ES LA MODA"
+33,33,"country, k-pop, r&b","Iris Divine, Debbie Jones, Nerve Agent","Besame Mucho, Sua amiga vou sarrar, COMPOZURE"
+34,34,"afrobeats, disco","Max Shulman, Tab Hunter","Overture to the Unwritten (from ""Hogwarts Legacy""), Palermo, Shkran Lak, benice"
+35,35,"folk, jazz","黄歩鈴, Audrey Napoleon, Wicked Tinkers","On My Love, toler, Return of the Mack"
+36,36,"world, soca",3Vel,"Abo Nokthula (feat. The Exclusive SA, Scotts Maphuma, Kabelo Sings, Bontle Smith, 2woshort & Stompiiey), Windy Hill"
+37,37,"arabic, soul, punk","Amar Chotai, Kafirun","Bad Since '97, Keep Going"
+38,38,"k-pop, jazz","Fiddlin' Frenchie Burke, Captain Mercier, Pino Scotto",Sueño (con Pablo Alborán)
+39,39,"soca, classical, r&b","Orchestra of The Old Fairfield Academy, Keith Young","Fountains (with Tems), Why, Gris"
+40,40,"r&b, soca, country",TOSHI with T-EARTH,Resonance - Slowed & Reverb
+41,41,folk,"Gary Barone, Sickidz, Others",She Loves You
+42,42,funk,"Scheibsta & die Buben, Peter Hagdahl, Franco Cipriani","Quiet Storm, Autumn Day"
+43,43,"hip-hop, rock","Bath Days, Suga D","Starlight, 壊れやすい心, Shenandoah"
+44,44,"j-pop, soul","Jack Dorsey, Cock On Dub, Joe Anderson","Burning Heart - From ""Rocky IV"" Soundtrack, 7AM in Lekki, I Took A Pill In Ibiza - Seeb Remix, Digo Lo Que Pienso"
+45,45,mandopop,"岸田繁, Brandy, Secret Boyfriend","I'm God, Beast Of Burden"
+46,46,"punk, metal, lofi","S. P. Waddington, SuperStrut","semi-hollow, P*Tain de m*Rde, A Moment Apart, I Miss You"
+47,47,"funk, gaming, mandopop","Bobby Caldwell, Reuna",Hate That I Love You
+48,48,"jazz, ambient, pop",田中直,"Metamodernity, Seasons, Down The Dirt Road Blues, NO MORE CONDITION, Breathe (feat. Jonathan McReynolds, DOE & Mav City Gospel Choir) - Studio Version"
+49,49,reggae,"加治ひとみ, Heimat-Los, RAEP",Toxic
+50,50,rock,"The Family Stand, Loser Life","What You Know (feat. Levka Rey), Ligali, If I Ruled the World (Imagine That) (feat. Lauryn Hill), Sad In Carolina, Zadok the Priest (Coronation Anthem No. 1, HWV 258)"
