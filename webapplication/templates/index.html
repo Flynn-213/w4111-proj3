@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommendations</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .search-box { margin-bottom: 30px; text-align: center; }
+        input[type="text"] { width: 300px; padding: 8px; }
+        button { padding: 8px 15px; background: #007bff; color: white; border: none; cursor: pointer; }
+        .track-card { border: 1px solid #ddd; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .feedback-btns { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <form action="/search" method="GET">
+            <input type="text" name="q" placeholder="Search songs or artists...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <h2>Your Recommendations</h2>
+    
+    {% if recommendations %}
+        {% for rec in recommendations %}
+        <div class="track-card">
+            <h3>{{ rec.track_name }}</h3>
+            <p>Artist: <a href="/artist/{{ rec.artist_id }}">{{ rec.artist_name }}</a></p>
+            <p>Genre: {{ rec.genre_name }}</p>
+            <p>Reason: <em>{{ rec.rec_reason }}</em></p>
+            
+            <form class="feedback-btns" action="/feedback" method="POST">
+                <input type="hidden" name="track_id" value="{{ rec.track_id }}">
+                <button type="submit" name="action" value="like">👍 Like</button>
+                <button type="submit" name="action" value="skip">👎 Skip</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No recommendations found. Start searching for music!</p>
+    {% endif %}
+</body>
+</html>

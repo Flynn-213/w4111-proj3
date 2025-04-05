@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        .back-link { display: block; margin-bottom: 20px; }
+        .result-item { margin: 20px 0; padding: 15px; border: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <a class="back-link" href="/">← Back to Recommendations</a>
+    <h2>Results for "{{ search_term }}"</h2>
+
+    {% if results %}
+        {% for item in results %}
+        <div class="result-item">
+            <h3>{{ item.track_name }}</h3>
+            <p>Artist: <a href="/artist/{{ item.artist_id }}">{{ item.artist_name }}</a></p>
+            <p>Genre: {{ item.genre_name }} • Popularity: {{ item.track_popularity }}/100</p>
+            
+            <form action="/feedback" method="POST">
+                <input type="hidden" name="track_id" value="{{ item.track_id }}">
+                <button type="submit" name="action" value="like">⭐ Add to Favorites</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found for "{{ search_term }}"</p>
+    {% endif %}
+</body>
+</html>

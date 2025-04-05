@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Preferences</title>
+    <style>
+        .pref-section { margin: 20px 0; }
+        .pref-list { list-style: none; padding-left: 0; }
+    </style>
+</head>
+<body>
+    <a href="/">← Back to Recommendations</a>
+    <h2>My Music Preferences</h2>
+
+    {% if preferences %}
+        <div class="pref-section">
+            <h3>Favorite Genres</h3>
+            <ul class="pref-list">
+                {% for genre in preferences.liked_genres.split(',') %}
+                <li>{{ genre }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="pref-section">
+            <h3>Favorite Artists</h3>
+            <ul class="pref-list">
+                {% for artist in preferences.liked_artists.split(',') %}
+                <li>{{ artist }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>No preferences saved yet</p>
+    {% endif %}
+</body>
+</html>
