@@ -3,34 +3,52 @@
 <head>
     <title>My Preferences</title>
     <style>
-        .pref-section { margin: 20px 0; }
-        .pref-list { list-style: none; padding-left: 0; }
+        .pref-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .pref-list { list-style: none; padding: 0; }
     </style>
 </head>
 <body>
-    <a href="/">← Back to Recommendations</a>
-    <h2>My Music Preferences</h2>
+    <nav>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/search">Search</a>
+        <a href="/logout">Logout</a>
+    </nav>
 
-    {% if preferences %}
-        <div class="pref-section">
-            <h3>Favorite Genres</h3>
-            <ul class="pref-list">
-                {% for genre in preferences.liked_genres.split(',') %}
-                <li>{{ genre }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+    <h1>My Preferences</h1>
+    
+    <div class="pref-section">
+        <h2>Favorite Tracks</h2>
+        <ul class="pref-list">
+            {% for track in tracks %}
+            <li>{{ track }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 
-        <div class="pref-section">
-            <h3>Favorite Artists</h3>
-            <ul class="pref-list">
-                {% for artist in preferences.liked_artists.split(',') %}
-                <li>{{ artist }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% else %}
-        <p>No preferences saved yet</p>
-    {% endif %}
+    <div class="pref-section">
+        <h2>Favorite Artists</h2>
+        <ul class="pref-list">
+            {% for artist in artists %}
+            <li>{{ artist }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="pref-section">
+        <h2>Favorite Genres</h2>
+        <ul class="pref-list">
+            {% for genre in genres %}
+            <li>{{ genre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <h2>Add New Preferences</h2>
+        <form action="/search">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search and Add</button>
+        </form>
+    </div>
 </body>
 </html>

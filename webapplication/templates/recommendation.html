@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <style>
+        .rec-item { padding: 15px; border: 1px solid #ddd; margin: 10px 0; }
+        .reason { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/search">Search</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <h1>Your Recommendations</h1>
+    
+    {% if recommendations %}
+        {% for rec in recommendations %}
+        <div class="rec-item">
+            <h3>{{ rec.track_name }}</h3>
+            <p class="reason">{{ rec.reason }}</p>
+            <form method="POST" action="/preferences">
+                <input type="hidden" name="item_id" value="{{ rec.track_id }}">
+                <input type="hidden" name="type" value="track">
+                <button type="submit">Add to Favorites</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No recommendations found. Start searching for music!</p>
+    {% endif %}
+</body>
+</html>

@@ -3,24 +3,33 @@
 <head>
     <title>Search Results</title>
     <style>
-        .back-link { display: block; margin-bottom: 20px; }
-        .result-item { margin: 20px 0; padding: 15px; border: 1px solid #eee; }
+        .search-header { display: flex; gap: 15px; margin-bottom: 20px; }
+        .result-item { padding: 15px; border-bottom: 1px solid #eee; }
+        .badge { background: #eee; padding: 3px 6px; border-radius: 4px; font-size: 0.8em; }
     </style>
 </head>
 <body>
-    <a class="back-link" href="/">← Back to Recommendations</a>
-    <h2>Results for "{{ search_term }}"</h2>
+    <div class="search-header">
+        <a href="/recommendations">Recommendations</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <form action="/search">
+        <input type="text" name="q" value="{{ search_term }}">
+        <button type="submit">Search</button>
+    </form>
 
     {% if results %}
-        {% for item in results %}
+        {% for result in results %}
         <div class="result-item">
-            <h3>{{ item.track_name }}</h3>
-            <p>Artist: <a href="/artist/{{ item.artist_id }}">{{ item.artist_name }}</a></p>
-            <p>Genre: {{ item.genre_name }} • Popularity: {{ item.track_popularity }}/100</p>
-            
-            <form action="/feedback" method="POST">
-                <input type="hidden" name="track_id" value="{{ item.track_id }}">
-                <button type="submit" name="action" value="like">⭐ Add to Favorites</button>
+            <h3>{{ result.name }}
+                <span class="badge">{{ result.type }}</span>
+            </h3>
+            <form method="POST" action="/preferences">
+                <input type="hidden" name="item_id" value="{{ result.id }}">
+                <input type="hidden" name="type" value="{{ result.type }}">
+                <button type="submit">Add to Favorites</button>
             </form>
         </div>
         {% endfor %}
