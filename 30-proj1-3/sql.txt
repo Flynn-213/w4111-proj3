@@ -1,0 +1,87 @@
+CREATE TABLE "User" (
+    user_id INT PRIMARY KEY,
+    user_name VARCHAR(100) NOT NULL,
+    user_email VARCHAR(100) NOT NULL CHECK (user_email LIKE '%@%'), 
+    registration_date DATE NOT NULL CHECK (registration_date <= CURRENT_DATE)
+);
+
+CREATE TABLE UserPreference (
+    preference_id INT PRIMARY KEY,
+    user_id INT NOT NULL UNIQUE, 
+    liked_genres TEXT CHECK (LENGTH(TRIM(liked_genres)) > 0), 
+    liked_artists TEXT CHECK (LENGTH(TRIM(liked_artists)) > 0),
+    liked_tracks TEXT CHECK (LENGTH(TRIM(liked_tracks)) > 0),
+    FOREIGN KEY (user_id) REFERENCES "User"(user_id) ON DELETE CASCADE
+);
+
+CREATE TABLE Track (
+    track_id VARCHAR(100) PRIMARY KEY,
+    track_name TEXT NOT NULL,
+    track_artist TEXT NOT NULL,
+    genre_name VARCHAR(100) NOT NULL,
+    track_popularity INT CHECK (track_popularity BETWEEN 0 AND 100),
+    album_id VARCHAR(100),
+    FOREIGN KEY (album_id) REFERENCES Album(album_id) ON DELETE CASCADE,
+    FOREIGN KEY (genre_name) REFERENCES Genre(genre_name) ON DELETE CASCADE
+);
+
+CREATE TABLE Album (
+    album_id VARCHAR(100) PRIMARY KEY,
+    album_name TEXT NOT NULL,
+    album_release_date DATE CHECK (album_release_date <= CURRENT_DATE)
+);
+
+CREATE TABLE Genre (
+    genre_id INT PRIMARY KEY,
+    genre_name VARCHAR(100) NOT NULL UNIQUE,
+    genre_description TEXT CHECK (LENGTH(TRIM(genre_description)) > 0)
+);
+
+CREATE TABLE ArtistTrack (
+    artist_id UUID,
+    track_id VARCHAR(100),
+    PRIMARY KEY (artist_id, track_id),
+    FOREIGN KEY (artist_id) REFERENCES Artist(artist_id) ON DELETE CASCADE,
+    FOREIGN KEY (track_id) REFERENCES Track(track_id) ON DELETE CASCADE
+);
+
+CREATE TABLE Artist (
+    artist_id UUID PRIMARY KEY,
+    artist_name VARCHAR(100) NOT NULL,
+    artist_nation VARCHAR(100) CHECK (LENGTH(TRIM(artist_nation)) > 0), 
+    artist_tag TEXT,
+    artist_popularity_score Float CHECK (artist_popularity_score BETWEEN 0 AND 100) 
+);
+
+CREATE TABLE Recommendation (
+    rec_id INT PRIMARY KEY,
+    user_id INT NOT NULL,
+    track_id VARCHAR(100) NOT NULL,
+    rec_reason TEXT CHECK (rec_reason IS NULL OR LENGTH(TRIM(rec_reason)) > 0),
+    FOREIGN KEY (user_id) REFERENCES "User"(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (track_id) REFERENCES Track(track_id) ON DELETE CASCADE
+);
+
+CREATE TABLE UserArtistPreference (
+    user_id INT NOT NULL,
+    artist_id UUID NOT NULL,
+    PRIMARY KEY (user_id, artist_id),
+    FOREIGN KEY (user_id) REFERENCES "User"(user_id),
+    FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+);
+
+CREATE TABLE UserTrackPreference (
+    user_id INT NOT NULL,
+    track_id VARCHAR(100) NOT NULL,
+    PRIMARY KEY (user_id, track_id),
+    FOREIGN KEY (user_id) REFERENCES "User"(user_id),
+    FOREIGN KEY (track_id) REFERENCES Track(track_id)
+);
+
+CREATE TABLE UserGenrePreference (
+    user_id INT NOT NULL,
+    genre_name VARCHAR(100) NOT NULL,
+    PRIMARY KEY (user_id, genre_name),
+    FOREIGN KEY (user_id) REFERENCES "User"(user_id),
+    FOREIGN KEY (genre_name) REFERENCES Genre(genre_name)
+);

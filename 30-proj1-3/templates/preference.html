@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Preferences</title>
+    <style>
+        .pref-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .pref-list { list-style: none; padding: 0; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/search">Search</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <h1>My Preferences</h1>
+    
+    <div class="pref-section">
+        <h2>Favorite Tracks</h2>
+        <ul class="pref-list">
+            {% for track in tracks %}
+            <li>
+                <a href="/track/{{ track.track_id }}">{{ track.track_name }}</a>
+                <form method="POST" action="/preferences" style="display: inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="item_id" value="{{ track.track_id }}">
+                    <input type="hidden" name="type" value="track">
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="pref-section">
+        <h2>Favorite Artists</h2>
+        <ul class="pref-list">
+            {% for artist in artists %}
+            <li>
+                <a href="/artist/{{ artist.artist_id }}">{{ artist.artist_name }}</a>
+                <form method="POST" action="/preferences" style="display: inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="item_id" value="{{ artist.artist_id }}">
+                    <input type="hidden" name="type" value="artist">
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="pref-section">
+        <h2>Favorite Genres</h2>
+        <ul class="pref-list">
+            {% for genre in genres %}
+            <li>
+                <a href="/genre/{{ genre.genre_name|urlencode }}">{{ genre.genre_name }}</a>
+                <form method="POST" action="/preferences" style="display: inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="item_id" value="{{ genre.genre_name }}">
+                    <input type="hidden" name="type" value="genre">
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <h2>Add New Preferences</h2>
+        <form action="/search">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search and Add</button>
+        </form>
+    </div>
+</body>
+</html>

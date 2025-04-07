@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ genre.genre_name }} Details</title>
+    <style>
+        .genre-header { display: flex; justify-content: space-between; align-items: center; }
+        .track-list { list-style: none; padding: 0; }
+        .track-item { padding: 10px; border-bottom: 1px solid #eee; }
+        .add-button {
+            background: #28a745;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/search">Search</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="genre-header">
+        <h1>{{ genre.genre_name }}</h1>
+        <form method="POST" action="/preferences">
+            <input type="hidden" name="item_id" value="{{ genre.genre_name }}">
+            <input type="hidden" name="type" value="genre">
+            <button type="submit" class="add-button">⭐ Add to Preferences</button>
+        </form>
+    </div>
+
+    <p>{{ genre.genre_description }}</p>
+
+    <h3>Popular Tracks in This Genre</h3>
+    <ul class="track-list">
+        {% for track in tracks %}
+        <li class="track-item">
+            <a href="/track/{{ track.track_id }}">{{ track.track_name }}</a>
+            <span>(Popularity: {{ track.track_popularity }}/100)</span>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

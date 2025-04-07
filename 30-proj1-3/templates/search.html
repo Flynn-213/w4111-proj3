@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        .search-header { display: flex; gap: 15px; margin-bottom: 20px; }
+        .result-item { padding: 15px; border-bottom: 1px solid #eee; }
+        .badge { background: #eee; padding: 3px 6px; border-radius: 4px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <div class="search-header">
+        <a href="/recommendations">Recommendations</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <form action="/search">
+        <input type="text" name="q" value="{{ search_term }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        {% for result in results %}
+        <div class="result-item">
+            <h3>
+                {% if result.type == 'track' %}
+                    <a href="/track/{{ result.id }}">{{ result.name }}</a>
+                {% elif result.type == 'artist' %}
+                    <a href="/artist/{{ result.id }}">{{ result.name }}</a>
+                {% elif result.type == 'album' %}
+                    <a href="/search?q={{ result.name|urlencode }}">{{ result.name }}</a>
+                {% elif result.type == 'genre' %}
+                <a href="/genre/{{ result.name|urlencode }}">{{ result.name }}</a>
+                {% else %}
+                    {{ result.name }}
+                {% endif %}
+                <span class="badge">{{ result.type }}</span>
+            </h3>
+            <form method="POST" action="/preferences">
+                <input type="hidden" name="item_id" value="{{ result.id }}">
+                <input type="hidden" name="type" value="{{ result.type }}">
+                <button type="submit">Add to Favorites</button>
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found for "{{ search_term }}"</p>
+    {% endif %}
+</body>
+</html>

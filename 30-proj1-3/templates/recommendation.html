@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <style>
+        .rec-item { padding: 15px; border: 1px solid #ddd; margin: 10px 0; }
+        .reason { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/search">Search</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <h1>Your Recommendations</h1>
+    
+    {% if recommendations %}
+        {% for rec in recommendations %}
+    <div class="rec-item">
+        <h3>
+            <a href="/track/{{ rec.track_id }}">{{ rec.track_name }}</a>
+        </h3>
+        <p class="reason">{{ rec.reason }}</p>  <!-- 直接显示原因，无需额外字段 -->
+    </div>
+        {% endfor %}
+    {% else %}
+        <p>No recommendations found. Start searching for music!</p>
+    {% endif %}
+</body>
+</html>

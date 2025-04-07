@@ -1,0 +1,71 @@
+<!-- templates/artist.html -->
+<div class="artist-info">
+    <!-- Artist details header -->
+    <h1>{{ artist.name }}</h1>
+
+    <!-- Add to Favorites button -->
+    <form method="POST" action="/preferences">
+        <!-- Hidden fields for artist identification -->
+        <input type="hidden" name="item_id" value="{{ artist.id }}">
+        <input type="hidden" name="type" value="artist">
+
+        <!-- Styled submit button -->
+        <button type="submit" class="favorite-button">
+            ⭐ Add to Favorites
+        </button>
+    </form>
+
+    <!-- Artist metadata section -->
+    <div class="metadata">
+        <p>Nationality: {{ artist.nation }}</p>
+        <p>Popularity Score: {{ artist.popularity }}/100</p>
+        <p>Tags: {{ artist.tags }}</p>
+    </div>
+
+    <!-- Top tracks listing -->
+    <h3>Popular Tracks</h3>
+    <ul class="track-list">
+        {% for track in tracks %}
+        <li>
+            <a href="/track/{{ track.id }}">{{ track.name }}</a>
+            <span class="popularity">({{ track.popularity }})</span>
+        </li>
+        {% endfor %}
+    </ul>
+</style>
+
+<!-- Style matching track.html's button -->
+<style>
+    .favorite-button {
+        background: #ffd700;
+        color: #2c3e50;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+    }
+
+    .favorite-button:hover {
+        background: #ffdf4d;
+        transform: scale(1.05);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .track-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .track-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .popularity {
+        color: #666;
+        font-size: 0.9em;
+    }
+</style>

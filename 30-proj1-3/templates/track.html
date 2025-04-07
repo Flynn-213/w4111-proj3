@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Details</title>
+    <style>
+        .track-info { margin: 20px; padding: 15px; border: 1px solid #ddd; }
+        .metadata { color: #666; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/recommendations">Recommendations</a>
+        <a href="/search">Search</a>
+        <a href="/preferences">Preferences</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="track-info">
+        <h1>{{ track.track_name }}</h1>
+        <div class="metadata">
+            <p>Artist: <a href="/artist/{{ track.artist_id }}">{{ track.artist_name }}</a></p>
+            <p>Album: {{ track.album_name or 'Single' }}</p>
+            <p>Genre: <a href="/genre/{{ track.genre_name|urlencode }}">{{ track.genre_name }}</a></p>
+            <p>Popularity: {{ track.track_popularity }}/100</p>
+        </div>
+        
+        <form method="POST" action="/preferences">
+            <input type="hidden" name="item_id" value="{{ track.track_id }}">
+            <input type="hidden" name="type" value="track">
+            <button type="submit">Add to Favorites</button>
+        </form>
+    </div>
+</body>
+</html>
